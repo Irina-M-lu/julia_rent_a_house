@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  
+ 
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(224, 255, 255, 0.2), 
+  rgba(127, 255, 212, 0.3)), 
+  url('img/background2.jpg');
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    top: 60px;
+    font-family: Montserrat, sans-serif;
+    color: seagreen ;
+    font-size: 50px;
+    margin: 80px;
+  }
+
+  .title {
+    text-align: center;
+    position: relative;
+      width: 24em;
+      margin: 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);    
+  }
+
+  .animation-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+  }
+  @keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 1200px;
+    left: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    transform: translateY(10%);
+    transition: ease 2s;
+    
+  }
+
+  .grid-container :hover {
+    transform: scale(1.1);
+    
+  }
+
+
+  .blocks {
+    height: 250px;
+    font-size: 20px;
+    border: 1px solid #006400/*#E0FFFF*/;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    opacity: 0;
+  
+  }
+
+
+
+  h3 {
+    font-size: 30px;
+    font-family: inherit;
+    color: #E0FFFF;
+    margin: 20px;
+  }
+
+ h3:hover {
+    color: #ADFF2F;
+    text-decoration: underline;
+  }
+
+
+  .block1 {
+    background-image: url('./img/flowers1.jpg');
+    background-size: cover;
+    border-radius: 80px 30px 30px 30px;
+    justify-content: right;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    animation: Rotate1 1s 5s ease;
+    animation-fill-mode: forwards;
+  }
+
+
+
+  .block2 {
+    background-image: url('./img/garden1.jpg');
+    background-size: cover;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: Rotate1 1s 7s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .block3 {
+    background-image: url('./img/garden2.jpg');
+    background-size: cover;
+    justify-content: left;
+    border-radius: 30px 80px 30px 30px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    animation: Rotate1 1s 9s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .block4 {
+    background-image: url('./img/flowers2.jpg');
+    background-size: cover;
+    justify-content: right;
+    border-radius: 30px 30px 30px 80px;
+    animation: Rotate1 1s 6s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .block5 {
+    background-image: url('./img/garden4.jpg');
+    background-size: cover;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    animation: Rotate1 1s 8s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .block6 {
+    background-image: url('./img/garden5.jpg');
+    background-size: cover;
+    justify-content: left;
+    border-radius: 30px 30px 80px 30px;
+    animation: Rotate1 1s 10s ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes Rotate1 {
+    0% {
+      opacity: 0;
+    }
+   
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .footer-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 50px;
+    transform: translateX(-100%);
+    margin: 0 auto;
+    height: 100px;
+    width: 350px;
+    background-color: #006400;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    animation: MooveFooter 2s 11s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .footer-container h3 {
+align-self: center;
+font-size: 30px;
+
+  }
+
+  i {
+    font-size: 35px;
+    color: #E0FFFF;;
+    margin: 20px 0;
+    align-self: center;
+  }
+
+  .footer-container :hover {
+    transform: scale(1.1);
+    color: #ADFF2F;
+  }
+
+  @keyframes MooveFooter {
+    0% {
+      transform: translateX(-100%)
+    }
+    100% {
+      transform: translateX(340%)
+    }
+    
+  }
