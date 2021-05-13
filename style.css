@@ -2,18 +2,18 @@
 
 * {
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  
- 
+
 }
 
 .container {
     position: relative;
     height: 100vh;
-  width: 100%;
+  
   background: linear-gradient(to bottom, rgba(224, 255, 255, 0.2), 
   rgba(127, 255, 212, 0.3)), 
   url('img/background2.jpg');
@@ -24,11 +24,11 @@ body {
 
 h1 {
     text-align: center;
-    top: 60px;
+    top: 6rem;
     font-family: Montserrat, sans-serif;
     color: seagreen ;
-    font-size: 50px;
-    margin: 80px;
+    font-size: 4rem;
+    margin: 7rem;
   }
 
   .title {
@@ -55,15 +55,16 @@ h1 {
   }
 
   .grid-container {
+    position: absolute;
+    height: 60%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 40px;
-    max-width: 1200px;
-    left: 100px;
+    grid-gap: 2.5rem;
+    max-width: 80rem;
+    left: 10rem;
     margin: 0 auto;
-    padding: 10px;
-    transform: translateY(10%);
+    padding: 1rem;
+    transform: translate(25%, 10%);
     transition: ease 2s;
     
   }
@@ -73,12 +74,12 @@ h1 {
     
   }
 
-
   .blocks {
-    height: 250px;
-    font-size: 20px;
-    border: 1px solid #006400/*#E0FFFF*/;
-    padding: 10px;
+    height: 17rem;
+    width: 22rem;
+    font-size: 2rem;
+    border: .1rem solid #006400/*#E0FFFF*/;
+    padding: 0;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
@@ -89,10 +90,10 @@ h1 {
 
 
   h3 {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: inherit;
     color: #E0FFFF;
-    margin: 20px;
+    margin: 2rem;
   }
 
  h3:hover {
@@ -104,7 +105,7 @@ h1 {
   .block1 {
     background-image: url('./img/flowers1.jpg');
     background-size: cover;
-    border-radius: 80px 30px 30px 30px;
+    border-radius: 30px 10px 10px 10px;
     justify-content: right;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     animation: Rotate1 1s 5s ease;
@@ -117,7 +118,7 @@ h1 {
     background-image: url('./img/garden1.jpg');
     background-size: cover;
     justify-content: center;
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 10px 10px 10px 10px;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: Rotate1 1s 7s ease;
     animation-fill-mode: forwards;
@@ -127,7 +128,7 @@ h1 {
     background-image: url('./img/garden2.jpg');
     background-size: cover;
     justify-content: left;
-    border-radius: 30px 80px 30px 30px;
+    border-radius: 10px 30px 10px 10px;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     animation: Rotate1 1s 9s ease;
     animation-fill-mode: forwards;
@@ -137,7 +138,7 @@ h1 {
     background-image: url('./img/flowers2.jpg');
     background-size: cover;
     justify-content: right;
-    border-radius: 30px 30px 30px 80px;
+    border-radius: 10px 10px 10px 30px;
     animation: Rotate1 1s 6s ease;
     animation-fill-mode: forwards;
   }
@@ -146,7 +147,7 @@ h1 {
     background-image: url('./img/garden4.jpg');
     background-size: cover;
     justify-content: center;
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 10px 10px 10px 10px;
     animation: Rotate1 1s 8s ease;
     animation-fill-mode: forwards;
   }
@@ -155,7 +156,7 @@ h1 {
     background-image: url('./img/garden5.jpg');
     background-size: cover;
     justify-content: left;
-    border-radius: 30px 30px 80px 30px;
+    border-radius: 10px 10px 30px 10px;
     animation: Rotate1 1s 10s ease;
     animation-fill-mode: forwards;
   }
@@ -175,11 +176,11 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    bottom: 50px;
+    bottom: 3rem;
     transform: translateX(-100%);
     margin: 0 auto;
-    height: 100px;
-    width: 350px;
+    height: 5rem;
+    width: 25rem;
     background-color: #006400;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     animation: MooveFooter 2s 11s ease-in-out;
@@ -188,14 +189,14 @@ h1 {
 
   .footer-container h3 {
 align-self: center;
-font-size: 30px;
+font-size: 2rem;
 
   }
 
   i {
-    font-size: 35px;
+    font-size: 2.5rem;
     color: #E0FFFF;;
-    margin: 20px 0;
+    margin: 1rem 0;
     align-self: center;
   }
 
@@ -209,7 +210,7 @@ font-size: 30px;
       transform: translateX(-100%)
     }
     100% {
-      transform: translateX(340%)
+      transform: translateX(360%)
     }
     
   }
