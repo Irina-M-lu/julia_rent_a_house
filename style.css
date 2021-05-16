@@ -12,14 +12,17 @@ body {
 
 .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-  
   background: linear-gradient(to bottom, rgba(224, 255, 255, 0.2), 
   rgba(127, 255, 212, 0.3)), 
   url('img/background2.jpg');
   background-size: cover;
   margin: 0;
   overflow: hidden;
+  align-items: center;
+  
 }
 
 h1 {
@@ -58,13 +61,16 @@ h1 {
     position: absolute;
     height: 60%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2.5rem;
-    max-width: 80rem;
-    left: 10rem;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));*/
+    grid-gap: 3rem;
+    max-width: 150rem;
+    top: 20%;
     margin: 0 auto;
     padding: 1rem;
-    transform: translate(25%, 10%);
+    justify-self: center;
+    align-items: center;
+    /*transform: translate(25%, 10%);*/
     transition: ease 2s;
     
   }
@@ -75,6 +81,7 @@ h1 {
   }
 
   .blocks {
+    align-self: center;
     height: 17rem;
     width: 22rem;
     font-size: 2rem;
@@ -112,8 +119,6 @@ h1 {
     animation-fill-mode: forwards;
   }
 
-
-
   .block2 {
     background-image: url('./img/garden1.jpg');
     background-size: cover;
@@ -124,7 +129,7 @@ h1 {
     animation-fill-mode: forwards;
   }
 
-  .block3 {
+.block3 {
     background-image: url('./img/garden2.jpg');
     background-size: cover;
     justify-content: left;
@@ -132,9 +137,8 @@ h1 {
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     animation: Rotate1 1s 9s ease;
     animation-fill-mode: forwards;
-  }
-
-  .block4 {
+}
+.block4 {
     background-image: url('./img/flowers2.jpg');
     background-size: cover;
     justify-content: right;
@@ -142,8 +146,7 @@ h1 {
     animation: Rotate1 1s 6s ease;
     animation-fill-mode: forwards;
   }
-
-  .block5 {
+.block5 {
     background-image: url('./img/garden4.jpg');
     background-size: cover;
     justify-content: center;
@@ -152,7 +155,7 @@ h1 {
     animation-fill-mode: forwards;
   }
 
-  .block6 {
+.block6 {
     background-image: url('./img/garden5.jpg');
     background-size: cover;
     justify-content: left;
@@ -160,6 +163,7 @@ h1 {
     animation: Rotate1 1s 10s ease;
     animation-fill-mode: forwards;
   }
+
 
   @keyframes Rotate1 {
     0% {
@@ -183,8 +187,10 @@ h1 {
     width: 25rem;
     background-color: #006400;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    animation: MooveFooter 2s 11s ease-in-out;
+    animation: MooveFooter 5s 11s ease-in-out;
     animation-fill-mode: forwards;
+    opacity: 0;
+   
   }
 
   .footer-container h3 {
@@ -207,10 +213,140 @@ font-size: 2rem;
 
   @keyframes MooveFooter {
     0% {
-      transform: translateX(-100%)
+      transform: translateX(-150%);
+      opacity: 1;
     }
     100% {
-      transform: translateX(360%)
+      transform: translateX(100%);
+      opacity: 1;
+    
     }
     
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      position: absolute;
+      margin: 1rem;
+    }
+
+    .title {
+      width: 600px;
+      margin: 0 auto;
+      white-space: wrap;
+    }
+
+    .grid-container {
+      width: 60rem;
+      margin: 0;
+      grid-gap: 2rem;
+     
+    }
+
+    .blocks {
+      width: 170px;
+    
+      justify-content: center;
+      border-radius: 10px;
+      margin: 0;
+      border: 1px solid #E0FFFF;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+    @keyframes MooveFooter {
+      0% {
+        transform: translateX(-200%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(70%);
+        opacity: 1;
+      
+      }
+  }
+}
+
+  @media (max-width: 500px) {
+
+    .container {
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      position: absolute;
+      margin: 0;
+    }
+
+    .title {
+      width: 20rem;
+      margin: 0 auto;
+      white-space: wrap;
+    }
+
+    @keyframes typewriter{
+      from{width: 0;}
+      to{width: 20em;}
+      }
+
+    .container .grid-container {
+      margin: 0;
+      position: absolute;
+      grid-template-columns: 1fr;
+      grid-gap: .5rem;
+      height: 40rem;
+      justify-self: center;
+      /*transform: translate(5%, 30%);
+      margin: 0;
+      /*display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;*/
+    }
+
+    .blocks {
+      width: 30%;
+      height: 90%;
+      justify-self: center;
+      border-radius: 10px;
+      clip-path: none;
+      margin: 0;
+      border: 1px solid #E0FFFF;
+    }
+
+    h3 {
+      font-size: 15px;
+    }
+
+    .footer-container {
+      width: 40%;
+      bottom: 4rem;
+      animation: MooveFooter 3s 11s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    .footer-container h3 {
+    font-size: 1rem;
+  }
+
+    @keyframes MooveFooter {
+      0% {
+        transform: translateX(-100%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(50%);
+        opacity: 1;
+      }
+      
+    }
+
   }
