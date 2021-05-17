@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ae417d031.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>Garden</title>
+<style>
+   * {
+       box-sizing: border-box;
+   }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: seagreen;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .house-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      h1, h3 {
+          color: seagreen;
+          font-family: Montserrat, sans-serif;
+          font-style: italic;
+          margin: 1rem;
+         
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .swiper-container {
+          top: 15%;
+          bottom: 10%;
+    width: 50rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .swiper-slide img {
+      background-size: cover;
+    display: block;
+    width: 100%;
+  }
+
+  @media(max-width: 500px) {
+h1, h3 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+      .swiper-container {
+          width: 30rem;
+          height: 20rem;
+          margin-top: 0;
+         
+      }
+      .swiper-slide {
+
+          width: 20rem; 
+          height: 15rem;
+      }
+
+     
+  }
+
+  @media(max-height: 500px) {
+    h1, h3 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+
+.swiper-slide {
+width: 20rem; 
+height: 15rem;
+}
+
+    .swiper-slide img {
+      background-size: cover;
+    display: block;
+    width: 100%;
+    height: 85%;
+  }
+  .swiper-container {
+          width: 30rem;
+          height: 20rem;
+          margin-top: 0;
+         
+      }
+  }
+</style>
+
+    </head>
+  
+    <body>
+        <div class="house-container">
+            <h1 class="title animation-typewriter" style="font-family: cursive;">See my garden</h1>
+        <h3>Swipe left</h3>
+      <!-- Swiper -->
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/img/page2_1.jpg" />
+            <h3>My flowers</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/page2-2.jpg" />
+            <h3>My fruit trees</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/page2_3.jpg" />
+            <h3>My pines</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/page2_4.jpg" />
+            <h3>My undergrouth</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/page2_5.jpg" />
+            <h3>My bushes</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/pergola.jpg" />
+            <h3>My pergola</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/garden8.jpg" />
+            <h3>My shed</h3>
+          </div>
+         
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    </div>
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+      <!-- Initialize Swiper -->
+     
+    </body>
+  </html>
